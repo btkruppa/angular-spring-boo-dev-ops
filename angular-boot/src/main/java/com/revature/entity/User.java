@@ -2,26 +2,13 @@ package com.revature.entity;
 
 import java.time.LocalDateTime;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
 public class User {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP", insertable = false, updatable = false)
 	private LocalDateTime joined = LocalDateTime.now();
 
-	@Column(updatable = false, nullable = false, unique = true)
 	private String username;
-
-	@Column(nullable = false, unique = true)
 	private String password;
 
 	public User() {

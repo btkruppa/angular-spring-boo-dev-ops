@@ -45,7 +45,7 @@ pipeline {
 
         stage('MVN Build') {
             steps {
-                dir('spring-boot-server') {
+                dir('angular-boot') {
                     // Run the maven build
                     sh "mvn -Dmaven.test.failure.ignore clean package"
                 }
@@ -79,7 +79,7 @@ pipeline {
             
             steps {
                 
-                dir('spring-boot-server') {
+                dir('angular-boot') {
                     dir ('target') {
                         // run the Janus server
                         sh "nohup java -jar angular-boot.jar &"
