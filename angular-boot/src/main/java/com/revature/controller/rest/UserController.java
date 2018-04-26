@@ -16,16 +16,14 @@ import com.revature.service.UserService;
 @RequestMapping("/user")
 public class UserController {
 
-	@Autowired
-	UserService us;
 
 	@GetMapping
 	public List<User> getAllUsers() {
-		return us.getAllUsers();
+		return null;
 	}
 
 	@GetMapping("projection")
 	public List<UserNoPassword> getAllUsersProjection() {
-		return us.getAllUsersProjection();
+		return null;
 	}
 }
