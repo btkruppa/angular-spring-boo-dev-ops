@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.revature.entity.User;
 import com.revature.projection.UserNoPassword;
-import com.revature.service.UserService;
 
 @RestController
 @RequestMapping("/user")
