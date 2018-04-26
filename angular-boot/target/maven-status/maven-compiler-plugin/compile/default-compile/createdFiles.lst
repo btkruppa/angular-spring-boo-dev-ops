@@ -1,0 +1,7 @@
+com\revature\controller\rest\FlashCardController.class
+com\revature\controller\rest\UserController.class
+com\revature\entity\User.class
+com\revature\controller\SpaController.class
+com\revature\entity\FlashCard.class
+com\revature\projection\UserNoPassword.class
+com\revature\Application.class
