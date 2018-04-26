@@ -20,34 +20,34 @@ pipeline {
        stage('Download') {
            steps {
               // Download code from a GitHub repository
-              git branch: 'master', url:'https://github.com/btkruppa/angular-spring-boo-dev-ops.git'
+              git 'https://github.com/btkruppa/angular-spring-boo-dev-ops.git'
            }
         }
 
-        stage('NPM Install') {
-            steps {
-                // go into client-side directory
-                dir('client-side') {
-                    // install node modules
-                    sh 'npm install'
-                }
-            }
-        }
+        // stage('NPM Install') {
+        //     steps {
+        //         // go into client-side directory
+        //         dir('client-side') {
+        //             // install node modules
+        //             sh 'npm install'
+        //         }
+        //     }
+        // }
 
-        stage('NPM Build') {
-            steps {
-                dir('client-side') {
-                    // build Angular app
-                    sh 'npm run build'
-                }
-            }
-        }
+        // stage('NPM Build') {
+        //     steps {
+        //         dir('client-side') {
+        //             // build Angular app
+        //             sh 'npm run build'
+        //         }
+        //     }
+        // }
 
         stage('MVN Build') {
             steps {
                 dir('angular-boot') {
                     // Run the maven build
-                    sh "mvn -Dmaven.test.failure.ignore clean package"
+                    sh "mvn clean package"
                 }
             }
         }
