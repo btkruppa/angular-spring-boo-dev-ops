@@ -21,7 +21,7 @@ public class FlashCardController {
 		List<FlashCard> cards = new ArrayList();
 		cards.add(new FlashCard(1, "question 1", "answer"));
 		cards.add(new FlashCard(2, "question 2", "answer"));
-		cards.add(new FlashCard(3, "question", "answer"));
+		cards.add(new FlashCard(3, "test", "test"));
 		return cards;
 	}
 
